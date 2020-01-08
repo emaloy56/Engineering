@@ -17,7 +17,6 @@ void loop()
  /*  The first part of the code Sets up the functions for the ultrasonic sensor and how it will communicate with the LED. 
  It will also tell the LED to when the distance is 10cm. */
 
-
 	delay(50);
 	Serial.print("Ping: ");
 	Serial.print(sonar.ping_cm());
@@ -38,7 +37,8 @@ which it will start to fade out.*/
 
 	/* The third part will communicate what will happen after the counter hits zero. 
 	It will turn to counter 1 which will counsel out counter 0. 
-	It says how bright it gets and how long the fade will last. */ 
+	It says how bright it gets and how long the fade will last. */
+
 	else if (counter == 0)
 	{		
 		for (int brightness = 255; brightness > 0; --brightness)
